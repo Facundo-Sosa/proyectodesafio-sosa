@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
     margin: 0;
@@ -355,25 +356,96 @@ body {
 }
 
 /*----------PROMOCIONES-----------------------------*/
+@media (max-width:767px) {  /*TAMAÑO SMARTPHONE*/
+    .mainPromociones {
+        display: grid;
+        grid-row-gap: 20px;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 20px;
+    }
 
-.mainPromociones {
-    margin-bottom: 40px;
-    margin-top: 10px;
+    .promo {
+        display: grid;
+    }
+
+    .promo h2 {
+        font-family: 'Anton', sans-serif;
+    }
+    
+    .promo h2,.promo p {
+        font-size: 16px;
+    }
+
+    .mainPromociones .precio {
+        position: absolute;
+        background-color: azure;
+        border-radius: 50%;
+        font-size: 10px;
+        height: 50px;
+        width: 50px;
+        padding-top: 15px;
+        justify-self: flex-end;
+    }
 }
 
-.mainPromociones p {
-    font-size: 30px;
-    display: inline-block;
+@media (min-width:768px) {  /*TAMAÑO TABLET*/
+    .mainPromociones {
+        display: grid;
+        grid-row-gap: 20px;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 20px;
+    }
+
+    .promo {
+        display: grid;
+    }
+
+    .promo h2 {
+        font-family: 'Anton', sans-serif;
+    }
+    
+    .promo h2,.promo p {
+        font-size: 16px;
+    }
+
+    .mainPromociones .precio {
+        position: absolute;
+        background-color: azure;
+        border-radius: 50%;
+        font-size: 10px;
+        height: 50px;
+        width: 50px;
+        padding-top: 15px;
+        justify-self: flex-end;
+    }
 }
 
-.mainPromociones .precio {
-    position: absolute;
-    background-color: azure;
-    border-radius: 50%;
-    height: 80px;
-    width: 90px;
-    margin-left: 50%;
-    padding-top: 30px;
+@media (min-width:1024px) { /*TAMAÑO DESKTOP*/
+    .mainPromociones {
+        margin-bottom: 40px;
+        margin-top: 10px;
+    }
+    
+    .mainPromociones p {
+        font-size: 30px;
+        display: inline-block;
+    }
+    
+    .mainPromociones .precio {
+        position: absolute;
+        background-color: azure;
+        border-radius: 50%;
+        height: 80px;
+        width: 90px;
+        margin-left: 50%;
+        padding-top: 15px;
+    }
+
+    .promo h2 {
+        font-family: 'Anton', sans-serif;
+    }
 }
 
 /*----------PIZZAS-----------------------------*/
