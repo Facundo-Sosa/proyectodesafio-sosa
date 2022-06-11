@@ -1,0 +1,16 @@
+footer {
+    background-color: darkgreen;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    div {
+        
+        a {
+            margin-right: 10px;
+        }
+    }
+}
