@@ -1,0 +1,5 @@
+@import "pizzas";
+
+.mainEmpanadas {
+    @extend .mainPizzas;
+}

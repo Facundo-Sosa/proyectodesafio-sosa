@@ -7,141 +7,7 @@
 @import "index";
 
 /*----------SUCURSALES-----------------------------*/
-@media (max-width:767px) {  /*TAMAÑO SMARTPHONE*/
-    .mainSucursales {
-        display: grid;
-        justify-content: center;
-        grid-row-gap: 50px;
-    }
-    
-    .sucursales {
-        display: grid;
-        justify-content: center;
-        text-align: center;
-        grid-row-gap: 80px;
-    }
-    
-    .sucursal {
-        display: grid;
-        grid-row-gap: 5px;
-        justify-content: center;
-    }
-    
-    .sucursal .linea {
-        justify-self: center;
-    }
-    
-    .mapaImagen {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-    }
-
-    .mapaImagen iframe, .mapaImagen img {
-        height: 300px;
-        width: 300px;
-        justify-self: center;
-    }
-
-    .quejasSugerencias {
-        display: grid;
-        justify-content: center;
-        grid-row-gap: 5px;
-        padding-bottom: 30px;
-    }
-}
-
-@media (min-width:768px) {  /*TAMAÑO TABLET*/
-    .mainSucursales {
-        display: grid;
-        justify-content: center;
-        grid-row-gap: 50px;
-    }
-    
-    .sucursales {
-        display: grid;
-        justify-content: center;
-        text-align: center;
-        grid-row-gap: 80px;
-    }
-    
-    .sucursal {
-        display: grid;
-        grid-row-gap: 5px;
-        justify-content: center;
-    }
-    
-    .sucursal .linea {
-        justify-self: center;
-    }
-    
-    .mapaImagen {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 10px;
-    }
-
-    .mapaImagen iframe, .mapaImagen img {
-        height: 300px;
-        width: 300px;
-    }
-
-    .quejasSugerencias {
-        display: grid;
-        justify-content: center;
-        grid-row-gap: 5px;
-        padding-bottom: 30px;
-    }
-}
-
-@media (min-width:1024px) { /*TAMAÑO DESKTOP*/
-    .mainSucursales {
-        padding-left: 30px;
-        display: grid;
-        justify-content: start;
-        grid-row-gap: 70px;
-    }
-
-    .mainSucursales h2 {
-        font-size: 40px;
-    }
-
-    .sucursales {
-        display: grid;
-        justify-content: start;
-        grid-row-gap: 80px;
-    }
-
-    .sucursal {
-        display: grid;
-        justify-content: start;
-        grid-row-gap: 5px;
-        justify-items: start;
-    }
-
-    .sucursal .linea {
-        justify-self: start;
-    }
-
-    .mapaImagen {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .mapaImagen iframe, .mapaImagen img {
-        height: 400px;
-        width: 400px;
-    }
-
-    .quejasSugerencias {
-        display: grid;
-        justify-content: start;
-        grid-row-gap: 5px;
-        padding-bottom: 30px;
-    }
-    
-}
+@import "sucursales";
 
 /*----------PROMOCIONES-----------------------------*/
 @media (max-width:767px) {  /*TAMAÑO SMARTPHONE*/
@@ -237,22 +103,7 @@
 }
 
 /*----------PIZZAS-----------------------------*/
-.mainPizzas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.mainPizzas .linea {
-    width: 350px;
-}
-
-.mainPizzas .elemento {
-    display:grid;
-    grid-template-columns: 100px 400px;
-    grid-gap: 10px;
-    grid-template-rows: 120px;
-}
+@import "pizzas";
 
 .fotoPizza {
     border-radius: 50%;
@@ -261,23 +112,7 @@
 }
 
 /*----------EMPANADAS-----------------------------*/
-
-.mainEmpanadas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.mainEmpanadas .linea {
-    width: 350px;
-}
-
-.mainEmpanadas .elemento {
-    display:grid;
-    grid-template-columns: 100px 400px;
-    grid-template-rows: 120px;
-    grid-gap: 10px;
-}
+@import "empanadas";
 
 .fotoEmpanada {
     border-radius: 50%;
@@ -286,4 +121,4 @@
 }
 
 /*----------FOOTER-----------------------------*/
-@import  "footer";
+@import "footer";

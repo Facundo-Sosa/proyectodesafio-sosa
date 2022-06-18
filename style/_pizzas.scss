@@ -1,0 +1,19 @@
+@import "generales";
+.mainPizzas {
+    display: grid;
+    @include grid-templatecolumns-rowgap(1fr, 10px);
+    justify-content: center;
+
+    .linea {
+        width: 350px;
+    }
+
+    .elemento {
+        display:grid;
+        grid-template-columns: 100px 400px;
+        grid-gap: 10px;
+        grid-template-rows: 120px;
+        justify-self: center;
+        @extend .estiloElemento;
+    }
+}

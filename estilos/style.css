@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +24,11 @@ body {
   background-color: brown;
   height: 5px;
   width: 400px;
+}
+
+.estiloElemento, .mainPizzas .elemento, .mainEmpanadas .elemento {
+  background-color: #731212;
+  border: 5px solid #731212;
 }
 
 /*----------HEADER-----------------------------*/
@@ -469,21 +478,48 @@ body {
 }
 
 /*----------PIZZAS-----------------------------*/
-.mainPizzas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  color: black;
 }
 
-.mainPizzas .linea {
+body {
+  background-color: #e60f0f;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto auto;
+      grid-template-rows: 1fr auto auto;
+}
+
+.linea {
+  background-color: brown;
+  height: 5px;
+  width: 400px;
+}
+
+.estiloElemento, .mainPizzas .elemento, .mainEmpanadas .elemento {
+  background-color: #731212;
+  border: 5px solid #731212;
+}
+
+.mainPizzas, .mainEmpanadas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPizzas .linea, .mainEmpanadas .linea {
   width: 350px;
 }
 
-.mainPizzas .elemento {
+.mainPizzas .elemento, .mainEmpanadas .elemento {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 400px;
@@ -491,6 +527,8 @@ body {
   grid-gap: 10px;
   -ms-grid-rows: 120px;
       grid-template-rows: 120px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .fotoPizza {
@@ -500,28 +538,57 @@ body {
 }
 
 /*----------EMPANADAS-----------------------------*/
-.mainEmpanadas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  color: black;
 }
 
-.mainEmpanadas .linea {
+body {
+  background-color: #e60f0f;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto auto;
+      grid-template-rows: 1fr auto auto;
+}
+
+.linea {
+  background-color: brown;
+  height: 5px;
+  width: 400px;
+}
+
+.estiloElemento, .mainPizzas .elemento, .mainEmpanadas .elemento {
+  background-color: #731212;
+  border: 5px solid #731212;
+}
+
+.mainPizzas, .mainEmpanadas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPizzas .linea, .mainEmpanadas .linea {
   width: 350px;
 }
 
-.mainEmpanadas .elemento {
+.mainPizzas .elemento, .mainEmpanadas .elemento {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 400px;
       grid-template-columns: 100px 400px;
+  grid-gap: 10px;
   -ms-grid-rows: 120px;
       grid-template-rows: 120px;
-  grid-gap: 10px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .fotoEmpanada {
@@ -531,19 +598,177 @@ body {
 }
 
 /*----------FOOTER-----------------------------*/
-footer {
-  background-color: darkgreen;
-  text-align: center;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  display: -ms-grid;
-  display: grid;
-  grid-row-gap: 5px;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+.btn-fb {
+  background-color: blue;
 }
 
-footer div a {
-  margin-right: 10px;
+.btn-tw {
+  background-color: lightBlue;
+}
+
+.btn-ig {
+  background-color: violet;
+}
+
+@media (max-width: 767px) {
+  footer {
+    background-color: #2b2d42;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 5px;
+    -ms-grid-rows: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+    color: whitesmoke;
+  }
+  footer h2, footer h3 {
+    font-size: 15px;
+  }
+  footer .redes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  footer .redes div {
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .redes div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .redes div a img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    background-color: #2b2d42;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 5px;
+    -ms-grid-rows: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+    color: whitesmoke;
+  }
+  footer h2, footer h3 {
+    font-size: 15px;
+  }
+  footer .redes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  footer .redes div {
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .redes div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .redes div a img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    background-color: #2b2d42;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 5px;
+    -ms-grid-rows: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+    color: whitesmoke;
+  }
+  footer h2, footer h3 {
+    font-size: 20px;
+  }
+  footer .redes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  footer .redes div {
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .redes div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  footer .redes div a img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,139 @@
-footer {
-    background-color: darkgreen;
-    text-align: center;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    display: grid;
-    grid-row-gap: 5px;
-    grid-template-rows: 1fr 1fr 1fr;
+$redes:(
+    fb: blue,
+    tw: lightBlue,
+    ig: violet,
+);
 
-    div {
-        
-        a {
-            margin-right: 10px;
-        }
+@each $red, $color in $redes {
+    .btn-#{$red} {
+        background-color: $color;
     }
 }
+
+@media (max-width: 767px) {
+    footer {
+        background-color: rgb(43, 45, 66);
+        text-align: center;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        color: whitesmoke;
+
+        h2, h3 {
+            font-size: 15px;
+        }
+    
+        .redes {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        
+            div {
+                border-radius: 50%;
+                display: flex;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;
+                justify-content: center;
+        
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    
+                    img {
+                        justify-self: center;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media (min-width: 768px) {
+    footer {
+        background-color: rgb(43, 45, 66);
+        text-align: center;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        color: whitesmoke;
+
+        h2, h3 {
+            font-size: 15px;
+        }
+    
+        .redes {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        
+            div {
+                border-radius: 50%;
+                display: flex;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;
+                justify-content: center;
+        
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+        
+                    img {
+                        justify-self: center;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media (min-width: 1024px) {
+    footer {
+        background-color: rgb(43, 45, 66);
+        text-align: center;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        color: whitesmoke;
+
+        h2, h3 {
+            font-size: 20px;
+        }
+    
+        .redes {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        
+            div {
+                border-radius: 50%;
+                display: flex;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;
+                justify-content: center;
+        
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+        
+                    img {
+                        justify-self: center;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+

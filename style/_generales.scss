@@ -19,3 +19,15 @@ body {
     height: 5px;
     width: 400px;
 }
+
+$colorElemento: rgb(115, 18, 18);
+
+.estiloElemento {
+    background-color: $colorElemento;
+    border: 5px solid $colorElemento;
+}
+
+@mixin grid-templatecolumns-rowgap($templatecolumns, $gap) {
+    grid-template-columns: $templatecolumns;
+    grid-row-gap: $gap;
+} 
